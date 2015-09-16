@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Cat_Age" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-d7-1hx">
+                                <rect key="frame" x="129" y="264" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Zus-dk-o1H"/>
+                                    <constraint firstAttribute="height" constant="30" id="x3L-p6-TM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="328-WJ-jNv">
+                                <rect key="frame" x="45" y="335" width="251" height="62"/>
+                                <color key="backgroundColor" red="0.95758048077045077" green="0.97845256818273429" blue="0.99919462203979492" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="251" id="9l2-Ea-Cgz"/>
+                                    <constraint firstAttribute="height" constant="62" id="fdn-gq-YzO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Click here to show in human age">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="butnResult:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jY7-7r-N2V"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cartoon-cat-free.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPi-Pb-9Wh">
+                                <rect key="frame" x="45" y="427" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="itP-PG-lTC"/>
+                                    <constraint firstAttribute="height" constant="128" id="nag-XI-Hgb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter Cat's age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-n0-Upl">
+                                <rect key="frame" x="117" y="210" width="221" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="XXs-fo-jU2"/>
+                                    <constraint firstAttribute="width" constant="221" id="kzT-3c-qR7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hPi-Pb-9Wh" secondAttribute="centerX" id="Gfj-lt-85L"/>
+                            <constraint firstAttribute="centerX" secondItem="EkO-d7-1hx" secondAttribute="centerX" id="Ij1-jy-5Bh"/>
+                            <constraint firstAttribute="centerX" secondItem="Bs2-n0-Upl" secondAttribute="centerX" id="Q7p-4p-q3u"/>
+                            <constraint firstAttribute="centerX" secondItem="328-WJ-jNv" secondAttribute="centerX" id="gqn-0R-ufm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoToGet" destination="EkO-d7-1hx" id="cH8-Ha-cFy"/>
+                        <outlet property="labelToShow" destination="Bs2-n0-Upl" id="39V-DJ-idA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cartoon-cat-free.png" width="2500" height="2500"/>
+    </resources>
+</document>
